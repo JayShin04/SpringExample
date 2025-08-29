@@ -20,7 +20,7 @@ public class ReviewController {
     public Review review() {
         // Controller이니 요청과 응답만 생각한다.
         // id가 14인 리뷰 정보 얻어오기
-        Review review = reviewService.getReview();
+        Review review = reviewService.getReview(2);
         return review;
 
     }
