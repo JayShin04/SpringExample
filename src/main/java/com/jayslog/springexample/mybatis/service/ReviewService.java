@@ -19,4 +19,17 @@ public class ReviewService {
         return review;
     }
 
+
+    // 리뷰 정보를 전달 받고, 리뷰를 추가하는 기능
+    public int createReview(
+            int storeId
+            , String menu
+            , String userName
+            , double point
+            , String review
+    ) {
+        // review 테이블에 한행을 저장하는 기능
+        int count = reviewRepository.insertReview(storeId, menu, userName, point, review);
+        return count;
+    }
 }
