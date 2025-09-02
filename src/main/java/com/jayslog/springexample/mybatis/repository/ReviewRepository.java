@@ -17,4 +17,7 @@ public interface ReviewRepository {
             ,@Param("point") double point
             ,@Param("review") String review
     );
+
+    // Review 객체를 전달해서 new_review에 저장하는 기능
+    public int insertReviewByObject(Review review);
 }

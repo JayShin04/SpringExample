@@ -32,4 +32,10 @@ public class ReviewService {
         int count = reviewRepository.insertReview(storeId, menu, userName, point, review);
         return count;
     }
+
+    public int createReviewByObject(Review review) {
+        // Review 객체를 전달해서 new_review에 저장하는 기능
+        int count = reviewRepository.insertReviewByObject(review);
+        return count;
+    }
 }
